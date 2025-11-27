@@ -1,0 +1,355 @@
+/* リセットとベーススタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    padding-bottom: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 3rem 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* グローバルナビゲーション */
+.global-nav ul {
+    height: 50px;
+    display: inline-block;
+    background-color: #8ae76bc9;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.global-nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.global-nav li {
+    float: left;
+    border-left: 1px solid #ddd;
+    font-size: 1%;
+    position: relative;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.global-nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+}
+
+.global-nav a:hover {
+    color: #6b7280;
+}
+
+/* モバイルメニュートグル */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* メインコンテンツ1 - ヒーローセクション */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    background-color: #e6e3dc;
+    color: #333;
+    padding: 4rem 2rem;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 60%;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.cta-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    background-color: #555;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.placeholder-image {
+    background-color: #ffffff;
+    border: 3px dashed #e0e0e0;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+/* メインコンテンツ2 - 品質セクション */
+.quality-section {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+}
+
+.quality-section .container > div:first-of-type {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 0;
+    color: #333;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.section-description {
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.robot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.robot-card {
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.robot-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.robot-image {
+    background-color: #ffffff;
+    border: 2px dashed #e0e0e0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    color: #999;
+}
+
+.robot-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.robot-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ダミーセクション */
+.about-section,
+.products-section,
+.contact-section,
+.community-section,
+.sns-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about-section {
+    background-color: #fafafa;
+}
+
+.products-section {
+    background-color: #ffffff;
+}
+
+.contact-section {
+    background-color: #fafafa;
+}
+
+.community-section {
+    background-color: #ffffff;
+}
+
+.sns-section {
+    background-color: #fafafa;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .global-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .global-nav.active {
+        display: block;
+    }
+
+    .global-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .robot-grid {
+        grid-template-columns: 1fr;
+    }
+}
